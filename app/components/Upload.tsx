@@ -2,11 +2,11 @@
 import React from 'react'
 import { useState } from 'react'
 
-const Upload = () => {
+export default function Upload(){
   const [file, setFile] = useState(null)
   const [isUploading, setIsUploading] = useState(false)
 
-  const handleFileChange = (e) => {
+  const handleFileChange = (e:any) => {
     setFile(e.target.files[0])
   }
 
@@ -42,5 +42,3 @@ const Upload = () => {
     </div>
   )
 }
-
-export default Upload
