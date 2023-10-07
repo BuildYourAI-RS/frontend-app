@@ -1,6 +1,6 @@
 "use client"
 
-import Upload from "./Upload";
+import DragDrop from "./FileSelector";
 import { useState } from "react";
 
 export default function AudioToImage() {
@@ -10,7 +10,7 @@ export default function AudioToImage() {
   return (
     <>
       <h1 className="m-3">Upload Your File Here</h1>
-      {/* <Upload setAudio={setAudio} setTranscript={setTranscript}></Upload> */}
+      <DragDrop setAudio={setAudio} setDGTranscript={setTranscript}></DragDrop>
     </>
   );
 }
