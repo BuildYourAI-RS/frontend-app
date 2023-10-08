@@ -1,0 +1,58 @@
+.wrapper {
+    max-width: 340px;
+    text-align: right;
+  }
+  
+  .title {
+    color: #0658c2;
+    margin-bottom: 10px;
+    font-family: 'JetBrains Mono', monospace;
+    word-break: break-all;
+  }
+  
+  .time {
+    margin-bottom: 10px;
+    margin-top: 10px;
+    font-family: 'JetBrains Mono', monospace;
+  }
+  
+  .player {
+    display: grid;
+    grid-template-columns:  1fr ;
+    gap: 20px;
+    place-items: center;
+  }
+  
+  .play {
+    width: 70px;
+    height: 70px;
+  }
+  
+  .play:hover {
+    cursor: pointer;
+  }
+  
+  
+  .ff {
+    height: 60px;
+    width: 60px;
+    cursor: pointer;
+  }
+  
+  .ffStop {
+    height: 40px;
+    width: 40px;
+    cursor: pointer;
+  }
+  
+  @media only screen and (max-width: 750px) {
+    .wrapper {
+       min-width: 100%;
+       max-width: 100%;
+       text-align: center;
+       
+    }
+  }
+  
+  
+  

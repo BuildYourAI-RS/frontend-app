@@ -2,7 +2,7 @@
 import { useState, useRef } from "react";
 import { FileUploader } from "react-drag-drop-files";
 import styles from "./FileSelector.module.css";
-const fileTypes = ["MP3", "OGG"];
+const fileTypes = ["MP3"];
 
 export default function DragDrop({
   setAudio,
@@ -36,7 +36,7 @@ export default function DragDrop({
       })
         .then((response) => response.json())
         .then((result) => {
-          setDGTranscript(JSON.parse(result.body).utterances);
+          setDGTranscript(JSON.parse(result.body).channels[0].alternatives[0].transcript);
           console.log(JSON.parse(result.body).channels[0].alternatives[0]);
           setLoading(false);
         })
