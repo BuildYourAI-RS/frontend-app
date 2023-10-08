@@ -6,13 +6,13 @@ import { useState } from "react";
 
 export default function AudioToImage() {
   const [audio, setAudio] = useState(false);
-  const [transcript, setTranscript] = useState();
+  const [transcript, setTranscript] = useState<string>();
 
   return (
     <div className="flex flex-col justify-center items-center h-screen">
       <h1 className="m-3">Upload Your File Here</h1>
       <DragDrop setAudio={setAudio} setDGTranscript={setTranscript}></DragDrop>
-      <Imagegen></Imagegen>
+      <Imagegen dGTranscript={transcript}></Imagegen>
     </div>
   );
 }
