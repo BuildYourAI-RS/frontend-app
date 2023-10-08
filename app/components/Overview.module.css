@@ -1,0 +1,16 @@
+.wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 50px;
+    margin-bottom:10px;
+  }
+  
+  .category {
+    color: orange;
+  }
+  
+  @media only screen and (max-width: 750px) {
+    .wrapper {
+        gap: 0;
+    }
+  }
