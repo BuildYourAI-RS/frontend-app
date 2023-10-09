@@ -17,7 +17,7 @@ export default function AudioToImage() {
   const [audioWaveForm, setAudioWaveForm] = useState();
 
   return (
-    <div className="flex flex-col justify-center items-center h-screen">
+    <div className="flex flex-col justify-center items-center">
       <h1 className="m-3">Upload Your File Here</h1>
       <div className={styles.container}>
         <DragDrop

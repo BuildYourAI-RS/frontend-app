@@ -27,10 +27,10 @@ const WaveForm = ({ url, setAudioWaveForm }) => {
       });
 
       if (typeof url == "string") {
-        console.log("url:",url)
+        // console.log("url:",url)
         waveform.current.load(url);
       } else {
-        console.log("not url:",url)
+        // console.log("not url:",url)
         waveform.current.loadBlob(url);
       }
 
