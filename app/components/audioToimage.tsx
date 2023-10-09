@@ -5,7 +5,7 @@ import Imagegen from "./Imagegen";
 import dynamic from "next/dynamic";
 import { useState } from "react";
 import styles from "./Home.module.css";
-const WaveForm = dynamic(() => import("./Waveform"), {
+const WaveForm = dynamic(() => import("./WaveForm"), {
   ssr: false,
 });
 import Player from "./Player";
