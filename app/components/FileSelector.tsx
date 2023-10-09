@@ -37,7 +37,7 @@ export default function DragDrop({
         .then((response) => response.json())
         .then((result) => {
           setDGTranscript(JSON.parse(result.body).channels[0].alternatives[0].transcript);
-          console.log(JSON.parse(result.body).channels[0].alternatives[0]);
+          // console.log(JSON.parse(result.body).channels[0].alternatives[0]);
           setLoading(false);
         })
         .catch((error) => {
