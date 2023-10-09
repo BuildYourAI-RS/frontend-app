@@ -18,25 +18,25 @@ export default function AudioToImage() {
 
   return (
     <div className="flex flex-col justify-center items-center">
-      <h1 className="m-3">Upload Your File Here</h1>
+      <h1 className="m-3 mt-10">Upload Your File Here</h1>
       <div className={styles.container}>
         <DragDrop
           setAudio={setAudio}
           setDGTranscript={setTranscript}
         ></DragDrop>
-        <div className="grid items-center">
-          <Player
-            audio={audio}
-            audioWaveForm={audioWaveForm}
-            dGTranscript={transcript}
-          />
-        </div>
-        {
-          <WaveForm
-            url={!audio ? "/Rev.mp3" : audio}
-            setAudioWaveForm={setAudioWaveForm}
-          />
-        }
+        {audio && (
+          <div className="grid items-center">
+            <Player
+              audio={audio}
+              audioWaveForm={audioWaveForm}
+              dGTranscript={transcript}
+            />
+            <WaveForm
+              url={audio ? audio : "./Rev.mp3"}
+              setAudioWaveForm={setAudioWaveForm}
+            />
+          </div>
+        )}
         <Overview dGTranscript={transcript}></Overview>
       </div>
       <Imagegen dGTranscript={transcript}></Imagegen>

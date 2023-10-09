@@ -112,7 +112,7 @@ const Imagegen = ({ dGTranscript }: { dGTranscript: string | undefined }) => {
   return (
     <div className="w-1/2 flex flex-col justify-center items-center">
       <button
-        className="btn btn-neutral ml-3"
+        className="btn btn-neutral ml-3 m-2"
         onClick={generateImages}
         disabled={isLoading || !isTransSet}
       >

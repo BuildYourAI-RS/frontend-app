@@ -71,10 +71,10 @@ const Player = ({ audio, audioWaveForm, dGTranscript }) => {
   return (
     <div className=" grid w-auto items-center text-center">
       <h2 className={styles.time}>
-        {currentTime}/{audioLength}
+        {audio ? `${currentTime}/${audioLength}`:"00:00"}
       </h2>
       <h3 className={styles.title}>
-        {audio ? audio.name : "LAB-LAB-AI-DEMO.mp3"}
+        {audio ? audio.name : "No audio file selected"}
       </h3>
       <div className={styles.player}>
         {/* <img
